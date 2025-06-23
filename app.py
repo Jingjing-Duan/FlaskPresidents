@@ -209,4 +209,4 @@ def download_template():
     return send_from_directory(directory='downloads', path='presidents.csv', as_attachment=True)
 
 if __name__ == '__main__':
-    app.run(port=5050)
+    app.run(host='0.0.0.0', port=10000)
