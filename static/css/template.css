@@ -1,0 +1,200 @@
+/* Applies to the entire body of the HTML document (except where overridden by more specific
+selectors). */
+body {
+  margin: 25px;
+  background-color: rgb(240,240,240);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #333
+}
+
+/* Applies to all <h1>...</h1> elements. */
+h1 {
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+/* Applies to all elements with <... class="someclass"> specified. */
+.someclass { color: red; }
+
+/* Applies to the element with <... id="someid"> specified. */
+#someid { color: green; }
+
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ul.menu li {
+  float: left;
+}
+ul.menu li a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.menu li a:hover {
+  background-color: #111;
+}
+
+/* ✅ 仅限菜单栏使用 */
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ul.menu li {
+  float: left;
+}
+ul.menu li a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.menu li a:hover {
+  background-color: #111;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  color: #333;
+}
+
+th, td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 如果实在太长，显示省略号 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px; /* 或你希望的固定高度 */
+
+}
+
+.card img {
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+.upload-container {
+  margin-top: 30px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.upload-container form,
+.upload-container a {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-container input[type="file"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.upload-container button {
+  padding: 10px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-container button:hover {
+  background-color: #1a242f;
+}
+.home-wrapper ul,
+.home-wrapper li {
+  background-color: transparent;
+  color: #333;
+}
+
+.feature-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.feature-list li {
+  display: list-item;
+  margin-bottom: 6px;
+}
+
+.home-flex-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.home-image img {
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

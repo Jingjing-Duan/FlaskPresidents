@@ -1,0 +1,30 @@
+{% extends "template.html" %}
+{% block content %} 
+<div class="container">
+    <h2>U.S. Presidents Data</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>President</th>
+          <th>Party</th>
+          <th>Home state</th>
+          <th>Occupation</th>
+          <th>Birth place</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in presidents %}
+          <tr>
+            <td>{{ row['Presidency'] }}</td>
+            <td>{{ row['President'] }}</td>
+            <td>{{ row['Party'] }}</td>
+            <td>{{ row['Home_state'] }}</td>
+            <td>{{ row['Occupation'] }}</td>
+            <td>{{ row['Birthplace'] }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

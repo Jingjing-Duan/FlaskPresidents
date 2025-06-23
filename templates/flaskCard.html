@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block content %}
+  <div class="card-container">
+    {% for p in presidents %}
+      <a href="{{ p.Wikipedia_entry }}" target="_blank" style="text-decoration: none; color: inherit;">
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/' + p.Image) }}" alt="Photo of {{ p.President }}">
+          <div class="card-content">
+            <h3>{{ p.President }}</h3>
+            <p><strong>Party:</strong> {{ p.Party }}</p>
+            <p><strong>Term:</strong> {{ p.Took_office }} → {{ p.Left_office }}</p>
+            <p><strong>State:</strong> {{ p.Home_state }}</p>
+          </div>
+        </div>
+    </a>
+    {% endfor %}
+  </div>
+{% endblock %}

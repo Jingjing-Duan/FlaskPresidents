@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>Jingjing's Demo Project - FlaskPresidents </title>
+   <link rel="stylesheet" href="{{ url_for('static',filename='css/template.css') }}">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+ </head>
+ <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Jingjing's Demo Project - FlaskPresidents</h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('upload_form') }}">csv file Upload</a></li>
+            <li><a href="{{ url_for('login') }}">Data Details</a></li>
+            <li><a href="{{ url_for('flaskCard') }}">Flask Cards</a></li>
+            <li><a href="{{ url_for('jinjaman') }}">Jinja</a></li>
+            <li><a href="{{ url_for('help') }}">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+ </body>
+</html>

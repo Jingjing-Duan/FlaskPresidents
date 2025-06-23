@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My First Web App</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+
+    <div class="container">
+    <p>Brief demo of Jinja 2</p>
+        {% for d in data %}
+            <p>{{d}}</p>
+        {% endfor %}
+        <hr>
+        {% if data[1]|int > 10%}
+            <p>True!</p>
+        {% else %}
+            <p>False!</p>
+        {% endif %}
+        <hr>
+        <p>{{data[2]|replace('good','FREAKIN AWESOME!')}}</p>
+        <hr>
+        {% for lang in data[3].split(',') %}
+            <p>{{lang}}</p>
+        {% endfor %}
+        <hr>
+        {{data[4]|safe}}
+      </div>
+
+    {% endblock %}
+  </body>
+</html>

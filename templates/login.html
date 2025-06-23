@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8279</title>
+    <link  rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <style>
+      .lead { margin: 30px auto; text-align: center; color: #fff; }
+    </style>
+  </head>
+  <body>
+  {% extends "template.html" %}
+    {% block content %}
+<br>
+         <div id="pinpad">
+
+         {{ message }}
+          <form id="myForm" method="POST" action="">
+            <input type="password" id="password" name="password" value=""/></br>
+            <input type="button" value="1" id="1" class="pinButton calc"/>
+            <input type="button" value="2" id="2" class="pinButton calc"/>
+            <input type="button" value="3" id="3" class="pinButton calc"/><br>
+            <input type="button" value="4" id="4" class="pinButton calc"/>
+            <input type="button" value="5" id="5" class="pinButton calc"/>
+            <input type="button" value="6" id="6" class="pinButton calc"/><br>
+            <input type="button" value="7" id="7" class="pinButton calc"/>
+            <input type="button" value="8" id="8" class="pinButton calc"/>
+            <input type="button" value="9" id="9" class="pinButton calc"/><br>
+            <input type="button" value="clear" id="clear" class="pinButton clear"/>
+            <input type="button" value="0" id="0 " class="pinButton calc"/>
+            <input type="button" value="enter" id="enter" class="pinButton enter"/>
+          </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script language="javascript">
+    $(document).ready(function () {
+      const input_value = $("#password");
+
+      //disable input from typing
+
+      $("#password").keypress(function () {
+        return false;
+      });
+
+      //add password
+      $(".calc").click(function () {
+        let value = $(this).val();
+        field(value);
+      });
+      function field(value) {
+        input_value.val(input_value.val() + value);
+      }
+      $("#clear").click(function () {
+        input_value.val("");
+      });
+      $("#enter").click(function () {
+        if (input_value.val() != '')
+            document.getElementById("password").value = input_value.val();
+        document.getElementById("myForm").submit();
+      });
+    });
+
+        </script>
+
+
+      {% endblock %}
+  </body>
+</html>

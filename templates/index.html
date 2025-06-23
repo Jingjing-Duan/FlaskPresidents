@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="home-flex-container">
+  <div class="home-wrapper">
+    <h2>Welcome to Jingjing's Flask Presidents Demo</h2>
+    <p>This is a full-stack web demo using Python Flask. It allows users to:</p>
+    <ul class="feature-list">
+      <li>Upload a CSV file of U.S. Presidents</li>
+      <li>Import the data into a MySQL database</li>
+      <li>Download the CSV template file</li>
+      <li>View detailed information in table form</li>
+      <li>Explore card-style profiles of each President</li>
+      <li>Click to visit each President's Wikipedia entry</li>
+    </ul>
+    <p>The project demonstrates Flask routing, form handling, file upload, template rendering with Jinja, and database operations with MySQL.</p>
+  </div>
+
+  <div class="home-image">
+    <img src="{{ url_for('static', filename='images/demo_presidents.png') }}" alt="Demo Preview">
+  </div>
+</div>
+{% endblock %}

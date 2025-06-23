@@ -1,0 +1,16 @@
+{% extends "template.html" %}
+{% block content %}
+<h2>Please upload the Presidents CSV file</h2>
+
+<div class="upload-container">
+  <form method="POST" action="/upload_presidents" enctype="multipart/form-data">
+    <input type="file" name="csv_file" accept=".csv" required>
+    <button type="submit">Upload and Import</button>
+  </form>
+
+  <a href="/download_template">
+    <button class="download-btn">Download CSV Template</button>
+  </a>
+</div>
+
+{% endblock %}
