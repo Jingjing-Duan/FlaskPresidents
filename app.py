@@ -24,7 +24,7 @@ def flaskCard():
         rows = cursor.fetchall()
         columns = [description[0] for description in cursor.description]
         presidents = [dict(zip(columns, row)) for row in rows]
-        return render_template("flaskcard.html", presidents=presidents)
+        return render_template("flaskCard.html", presidents=presidents)
     except Exception as e:
         return f"❌ Error: {e}"
     finally:
